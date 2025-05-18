@@ -32,13 +32,15 @@ cd notificaton
 spring.application.name=notification-service
 
 # MySQL DB config
-spring.datasource.url=jdbc:mysql://localhost:3306/notification_service?useSSL=false&serverTimezone=UTC
-spring.datasource.username=YOUR_DB_USERNAME
-spring.datasource.password=YOUR_DB_PASSWORD
+spring.datasource.url=jdbc:mysql://localhost:3306/notification_service?useSSL=false&serverTimezone=UTC # change this
+spring.datasource.username=YOUR_DB_USERNAME # change this
+spring.datasource.password=YOUR_DB_PASSWORD # change this
 
 spring.jpa.hibernate.ddl-auto=update
 spring.jpa.show-sql=true
 spring.jpa.database-platform=org.hibernate.dialect.MySQLDialect
+
+springdoc.swagger-ui.path=/docs
 ```
 
 3. Create the database:
@@ -53,7 +55,8 @@ CREATE DATABASE notification_service;
 ```
 
 ## API Endpoints
-You can use tools like Postman to access the endpoint.
+You can use tools like Postman or Swagger to access the API endpoints.
+
 ### ✅ Send Notification  
 `POST localhost:8080/api/notifications`
 
@@ -68,6 +71,12 @@ You can use tools like Postman to access the endpoint.
 
 ### ✅ Get User Notifications  
 `GET localhost:8080/api/users/{userId}/notifications`
+
+### ✅ View API Documentation (Swagger UI)
+After running the app, open your browser and go to either:
+
+- [http://localhost:8080/swagger-ui/index.html](http://localhost:8080/swagger-ui/index.html)  
+- [http://localhost:8080/docs](http://localhost:8080/docs)
 
 ---
 
