@@ -15,3 +15,50 @@ buildNumber.properties
 .project
 # JDT-specific (Eclipse Java Development Tools)
 .classpath
+
+# Java
+*.class
+*.log
+*.jar
+*.war
+*.ear
+*.iml
+
+# Maven
+target/
+!.mvn/wrapper/maven-wrapper.jar
+.mvn/timing.properties
+
+# IntelliJ
+.idea/
+*.iws
+*.iml
+*.ipr
+out/
+
+# Eclipse
+.project
+.classpath
+.c9/
+.settings/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Environment files
+.env
+application.properties
+
+# Logs
+logs/
+*.log
+
+# MySQL dump
+*.sql
+
+# Others
+node_modules/
+.vscode/
+*.bak
+*.swp
